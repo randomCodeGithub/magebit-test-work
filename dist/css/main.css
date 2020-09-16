@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.8;
+}
+
+.authorization .container, .form-div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* === ANIMATION ===*/
+/* === MEDIA ===*/
+@-webkit-keyframes shrink {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  10% {
+    -webkit-transform: scale(1.175);
+            transform: scale(1.175);
+  }
+  25% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  90% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  10% {
+    -webkit-transform: scale(1.175);
+            transform: scale(1.175);
+  }
+  25% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  90% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.8px) {
+  .form-div {
+    left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .container {
+    width: 100% !important;
+  }
+  .form-div {
+    height: 65%;
+    left: 0 !important;
+  }
+  .form-div__sign-up, .form-div__login {
+    width: 90% !important;
+  }
+  .col-resp-100 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .form-div {
+    height: 65%;
+  }
+  .col-resp-100 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .col-50 {
+    width: 50% !important;
+  }
+  .authorization .container {
+    height: 100vh;
+  }
+  .authorization__col-50 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .form-div {
+    height: 110% !important;
+    top: -5% !important;
+    left: 2%;
+  }
+  .form-div .border-top {
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    left: -10px;
+    border-width: 0 0 22px 11px;
+    border-color: transparent transparent #89deff transparent;
+    top: 0;
+  }
+  .form-div .border-middle {
+    background-color: #89deff;
+    width: 9px;
+    height: 422px;
+    position: absolute;
+    top: 21px;
+    left: -10px;
+    z-index: -1;
+  }
+  .form-div .border-bottom {
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    left: -10px;
+    border-width: 22px 0 0 11px;
+    border-color: #89deff transparent transparent transparent;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-height: 790px) {
+  .authorization .container {
+    height: 100vh;
+  }
+}
+
+.bg-img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url(../../assets/img/bg.jpg) no-repeat center fixed;
+  background-size: cover;
+  z-index: -1;
+  -webkit-animation: shrink 13s infinite alternate steps(60);
+          animation: shrink 13s infinite alternate steps(60);
+}
+
+.logo {
+  margin-top: 0.6rem;
+}
+
+.d-none {
+  display: none;
+}
+
+/*
+ === TEXT TAG ===
+*/
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1.6px;
+  background-color: #48abfe;
+  margin-top: 25px;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*
+ === CONTAINER, ROW, COL  ===
+*/
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  position: relative;
+}
+
+.col-50 {
+  width: 50%;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*
+ === BUTTONS ===
+*/
+button {
+  border-radius: 50rem;
+  text-transform: uppercase;
+}
+
+/*
+ === AUTHORIZATION DIV ===
+*/
+.authorization .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authorization__col-50 {
+  color: #fff;
+  padding: 3.7rem 4.5rem;
+}
+
+.authorization .row {
+  background-color: rgba(27, 35, 71, 0.8);
+}
+
+.authorization button {
+  font-size: 13px !important;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #48abfe;
+  padding: 0.9rem 3rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.authorization button:hover {
+  background-color: #48abfe;
+}
+
+/*
+SIGN UP AND SIGN IN FORM DIV
+*/
+.form-div {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  background-color: #fff !important;
+  /*
+ === FIELD GROUPS ===
+*/
+}
+
+.form-div__sign-up, .form-div__login {
+  width: 65%;
+  opacity: 1;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  position: absolute;
+}
+
+.form-div__login {
+  opacity: 0;
+}
+
+.form-div__login .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-div .row {
+  background-color: #fff !important;
+}
+
+.form-div .row .col-50:nth-child(2) {
+  text-align: right;
+}
+
+.form-div .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-div .form-group .row {
+  margin-bottom: -0.7rem;
+}
+
+.form-div .form-group .col-50:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-div .form-group label {
+  color: #8495b7;
+}
+
+.form-div .form-group label span {
+  color: red;
+}
+
+.form-div .form-control {
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+  border: 0 !important;
+  border-bottom: 1px solid #8495b7 !important;
+  font-size: 16px !important;
+}
+
+.form-div button {
+  background-color: #f89a36;
+  border: 0;
+}
+
+.form-div button:hover {
+  background-color: #f6c039;
+}
+
+.form-div a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #8495b7;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 1.6rem;
+  width: 100%;
+  z-index: -1;
+}
+
+footer p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #a7b3cb;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
